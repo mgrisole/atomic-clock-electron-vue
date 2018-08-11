@@ -1,18 +1,22 @@
-<template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+  v-container(fluid fill-height)
+    v-slide-y-transition(mode="out-in")
+      v-layout(align-center fill-height column justify-center )
+        ModuleTimer
+        ModuleTimer 
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import ModuleTimer from './modules/Timer'
 
 export default {
-  name: 'home',
+  name: 'HomeView',
   components: {
-    HelloWorld
+    ModuleTimer
   }
 }
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped lang="stylus">
+</style>
